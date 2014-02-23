@@ -1,0 +1,276 @@
+unit ori_FastArrays;
+
+
+//{$mode objfpc}
+{$H+}
+
+interface
+
+uses
+  SysUtils, Classes;
+
+  const
+       Ptr_RealSizeInc = 10;
+
+  type
+       TTypePtrArray = array[0..High(Longint) div Sizeof(Pointer) - 1] of Pointer;
+       PTypePtrArray = ^TTypePtrArray;
+
+  TPtrArray = class(TObject)
+
+       protected
+            RealSize: Integer;
+
+       public
+            Values: PTypePtrArray;
+            Count : Integer;
+
+            procedure NewSize(const Size: Integer);
+            procedure SetLength(const Size: Integer);
+            procedure Add(const Value: Pointer);
+            procedure Delete(const Index: Longint);
+            procedure Insert(const Index: Longint; Value: Pointer);
+            function Pop: Pointer;
+            procedure Clear;
+            procedure CacheClear;
+            constructor Create;
+            destructor Destroy; override;
+            property Value: PTypePtrArray read Values write Values;
+            function IsExists(const Value: Pointer): Boolean;
+        end;
+
+   const
+       Str_RealSizeInc = 10;
+
+   type
+   TTypeStrArray = array[0..High(Longint) div Sizeof(AnsiString) - 1] of AnsiString;
+   PTypeStrArray = ^TTypeStrArray;
+
+   TStringArray = class(TObject)
+        protected
+            RealSize: Integer;
+            procedure NewSize(const Size: Integer);
+        public
+            Values: PTypeStrArray;
+            Count : Integer;
+
+            procedure Add(const Value: AnsiString);
+            procedure Delete(const Index: Longint);
+            procedure Insert(const Index: Longint; Value: AnsiString);
+            procedure Clear;
+            procedure CacheClear;
+            constructor Create;
+            destructor Destroy; override;
+
+            procedure DoClone(const donor: TStringArray);
+        end;
+
+
+implementation
+
+procedure TPtrArray.Add(const Value: Pointer);
+begin
+    Inc(Count);
+    if Count > RealSize then
+    begin
+        Self.NewSize( RealSize + Ptr_RealSizeInc );
+    end;
+    Values^[ Count-1 ] := Value;
+end;
+
+procedure TPtrArray.Delete(const Index: Integer);
+var
+  Temp: Pointer;
+begin
+  Dec(Count);
+  if Index < Count then
+    System.Move(Values^[Index + 1], Values^[Index],
+      (Count - Index) * SizeOf(Pointer));
+
+  if (Count > Ptr_RealSizeInc) and ((RealSize - Count)+1 > Ptr_RealSizeInc) then
+      NewSize(RealSize - Ptr_RealSizeInc);
+end;
+
+procedure TPtrArray.CacheClear;
+begin
+   if RealSize > Ptr_RealSizeInc + 1 then
+      NewSize(Ptr_RealSizeInc);
+      
+   Count := 0;
+end;
+
+procedure TPtrArray.Clear;
+begin
+   NewSize(0);
+   Count := 0;
+end;
+
+constructor TPtrArray.Create;
+begin
+    inherited Create;
+    RealSize := 0;
+    Count := 0;
+end;
+
+destructor TPtrArray.Destroy;
+begin
+   Clear;
+   inherited;
+end;
+
+procedure TPtrArray.Insert(const Index: Integer; Value: Pointer);
+begin
+  if Count + 1 > RealSize then
+    NewSize(RealSize + Ptr_RealSizeInc);
+    
+  if Index < Count then
+    System.Move(Values^[Index], Values^[Index + 1],
+      (Count - Index) * SizeOf(Pointer));
+      
+  Values^[Index] := Value;
+  Inc(Count);
+end;
+
+function TPtrArray.IsExists(const Value: Pointer): Boolean;
+   var
+   i: integer;
+begin
+   for i := 0 to Count - 1 do
+   if Value = Values^[i] then
+   begin
+      Result := true;
+      exit;
+   end;
+   Result := false;
+end;
+
+procedure TPtrArray.NewSize(const size: Integer);
+begin
+    ReallocMem(Values, size * SizeOf(Pointer));
+    RealSize := size;
+end;
+
+
+function TPtrArray.Pop: Pointer;
+begin
+   Result := Values^[ Self.Count - 1 ];
+   Dec(Count);
+   if (Count > Ptr_RealSizeInc) and ((RealSize - Count)+1 > Ptr_RealSizeInc) then
+      NewSize(RealSize - Ptr_RealSizeInc);
+end;
+
+procedure TPtrArray.SetLength(const Size: Integer);
+begin
+  NewSize(Size);
+  Count := Size;
+end;
+
+{ TStringArray }
+
+procedure TStringArray.Add(const Value: AnsiString);
+begin
+    Inc(Count);
+    if Count > RealSize then
+    begin
+        Self.NewSize( RealSize + Str_RealSizeInc );
+    end;
+    Initialize(Values^[ Count-1 ]);
+    Values^[ Count-1 ] := Value;
+end;
+
+procedure TStringArray.CacheClear;
+  var
+  i: integer;
+begin
+   for i := 0 to Count - 1 do
+   begin
+        Finalize(Values^[i]);
+   end;
+   
+   if RealSize > Str_RealSizeInc + 1 then
+   begin
+      NewSize(Str_RealSizeInc);
+   end;
+
+   Count := 0;
+end;
+
+procedure TStringArray.Clear;
+  var
+  i: integer;
+begin
+   for i := 0 to Count - 1 do
+   begin
+      Finalize(Values^[i]);
+   end;
+   NewSize(0);
+   Count := 0;
+end;
+
+constructor TStringArray.Create;
+begin
+    inherited Create;
+    RealSize := 0;
+    Count := 0;
+end;
+
+procedure TStringArray.Delete(const Index: Integer);
+begin
+  Finalize(Values^[Index]);
+  Pointer(Values^[Index]) := nil;
+  Dec(Count);
+  if Index < Count then
+    System.Move(Values^[Index + 1], Values^[Index],
+      (Count - Index) * SizeOf(AnsiString));
+
+  if (Count > Str_RealSizeInc) and ((RealSize - Count)+1 > Str_RealSizeInc) then
+      NewSize(RealSize - Str_RealSizeInc);
+end;
+
+destructor TStringArray.Destroy;
+begin
+   Clear;
+   inherited;
+end;
+
+procedure TStringArray.DoClone(const donor: TStringArray);
+   var
+   i: integer;
+begin
+   if Count > 0 then
+      Clear;
+      
+   NewSize(donor.RealSize);
+   Count := donor.Count;
+
+   for i := 0 to Count - 1 do
+   begin
+        Initialize( Values^[i] );
+        Values^[i] := donor.Values^[i];
+   end;
+end;
+
+procedure TStringArray.Insert(const Index: Integer; Value: AnsiString);
+begin
+  if Count + 1 > RealSize then
+    NewSize(RealSize + Str_RealSizeInc);
+    
+  if Index < Count then begin
+    System.Move(Values^[Index], Values^[Index + 1],
+      (Count - Index) * SizeOf(AnsiString));
+  end;
+  
+  Initialize(Values^[Index]);
+  Values^[Index] := Value;
+  Inc(Count);
+end;
+
+procedure TStringArray.NewSize(const size: Integer);
+begin
+   ReallocMem(Values, Size * SizeOf(AnsiString));
+   RealSize := size;
+end;
+
+
+
+end.

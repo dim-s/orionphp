@@ -1,0 +1,14 @@
+echo 'Begin...';
+sleep(1);
+
+$x = 0;
+
+while ($x < 100){
+   $x++;
+   usleep(100);
+
+   echo $x
+}
+
+echo 'Finish.';
+sleep(1);

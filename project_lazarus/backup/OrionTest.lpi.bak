@@ -1,0 +1,720 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <MainUnit Value="0"/>
+      <UseXPManifest Value="True"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="SynEdit"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="67">
+      <Unit0>
+        <Filename Value="OrionTest.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="OrionTest"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="23" Y="14"/>
+        <UsageCount Value="79"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uMain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMain"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="247"/>
+        <CursorPos X="18" Y="257"/>
+        <UsageCount Value="79"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\uParser.pas"/>
+        <UnitName Value="uParser"/>
+        <TopLine Value="517"/>
+        <CursorPos X="15" Y="533"/>
+        <UsageCount Value="8"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\VM\vmTypes.pas"/>
+        <UnitName Value="vmTypes"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="8"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\VM\vmTables.pas"/>
+        <UnitName Value="vmTables"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="11"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\VM\vmValues.pas"/>
+        <UnitName Value="vmValues"/>
+        <TopLine Value="261"/>
+        <CursorPos X="1" Y="285"/>
+        <UsageCount Value="17"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\uOpGen.pas"/>
+        <UnitName Value="uOpGen"/>
+        <TopLine Value="863"/>
+        <CursorPos X="29" Y="890"/>
+        <UsageCount Value="8"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\VM\vmCompiler.pas"/>
+        <UnitName Value="vmCompiler"/>
+        <TopLine Value="859"/>
+        <CursorPos X="6" Y="876"/>
+        <UsageCount Value="8"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\VM\vmUserFunc.pas"/>
+        <UnitName Value="vmUserFunc"/>
+        <TopLine Value="4"/>
+        <CursorPos X="15" Y="14"/>
+        <UsageCount Value="12"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\VM\vmEval.pas"/>
+        <UnitName Value="vmEval"/>
+        <TopLine Value="1839"/>
+        <CursorPos X="33" Y="1839"/>
+        <UsageCount Value="17"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\VM\funcs\vmCore.pas"/>
+        <UnitName Value="vmCore"/>
+        <TopLine Value="48"/>
+        <CursorPos X="42" Y="69"/>
+        <UsageCount Value="8"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="uTestFuncs.pas"/>
+        <UnitName Value="uTestFuncs"/>
+        <TopLine Value="12"/>
+        <CursorPos X="71" Y="26"/>
+        <UsageCount Value="19"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\uStack.pas"/>
+        <UnitName Value="uStack"/>
+        <TopLine Value="148"/>
+        <CursorPos X="25" Y="161"/>
+        <UsageCount Value="15"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\uTypes.pas"/>
+        <UnitName Value="uTypes"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="8"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\libs\FastMM4.pas"/>
+        <UnitName Value="FastMM4"/>
+        <TopLine Value="9239"/>
+        <CursorPos X="24" Y="9266"/>
+        <UsageCount Value="8"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\Orion.pas"/>
+        <UnitName Value="Orion"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="16" Y="17"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\uStrUtils.pas"/>
+        <UnitName Value="uStrUtils"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="11"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\lcl\buttons.pp"/>
+        <UnitName Value="Buttons"/>
+        <TopLine Value="124"/>
+        <CursorPos X="25" Y="141"/>
+        <UsageCount Value="7"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="uDemos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fmDemos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uDemos"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="7"/>
+        <CursorPos X="16" Y="17"/>
+        <UsageCount Value="78"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="E:\BESEN\BESENNumberUtils.pas"/>
+        <UnitName Value="BESENNumberUtils"/>
+        <TopLine Value="1198"/>
+        <CursorPos X="14" Y="1212"/>
+        <UsageCount Value="7"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="E:\BESEN\BESENTypes.pas"/>
+        <UnitName Value="BESENTypes"/>
+        <TopLine Value="94"/>
+        <CursorPos X="6" Y="111"/>
+        <UsageCount Value="7"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="E:\BESEN\BESENDTOA.pas"/>
+        <UnitName Value="BESENDTOA"/>
+        <TopLine Value="2830"/>
+        <CursorPos X="16" Y="2079"/>
+        <UsageCount Value="7"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\VM\vmConstants.pas"/>
+        <UnitName Value="vmConstants"/>
+        <TopLine Value="117"/>
+        <CursorPos X="69" Y="137"/>
+        <UsageCount Value="7"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\VM\cOptions.inc"/>
+        <TopLine Value="6"/>
+        <CursorPos X="3" Y="20"/>
+        <UsageCount Value="12"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\VM\funcs\vmCoreArray.pas"/>
+        <UnitName Value="vmCoreArray"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\VM\funcs\vmCoreMath.pas"/>
+        <UnitName Value="vmCoreMath"/>
+        <TopLine Value="118"/>
+        <CursorPos X="55" Y="137"/>
+        <UsageCount Value="16"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="..\VM\funcs\vmCoreString.pas"/>
+        <UnitName Value="vmCoreString"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="..\VM\vmShortApi.pas"/>
+        <UnitName Value="vmShortApi"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="..\un_lineinfo.pp"/>
+        <UnitName Value="un_lineinfo"/>
+        <TopLine Value="78"/>
+        <CursorPos X="9" Y="68"/>
+        <UsageCount Value="7"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus\components\synedit\synedit.pp"/>
+        <UnitName Value="SynEdit"/>
+        <TopLine Value="4819"/>
+        <CursorPos X="28" Y="4832"/>
+        <UsageCount Value="18"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="..\VM\vmVariables.pas"/>
+        <UnitName Value="vmVariables"/>
+        <TopLine Value="1"/>
+        <CursorPos X="27" Y="15"/>
+        <UsageCount Value="12"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="..\uErrors.pas"/>
+        <UnitName Value="uErrors"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="9"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="..\uStrConsts.pas"/>
+        <UnitName Value="uStrConsts"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="9"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\WINDOWS\Temp\Rar$DI11.3250\demo01.lpr"/>
+        <UnitName Value="demo01"/>
+        <TopLine Value="70"/>
+        <CursorPos X="26" Y="12"/>
+        <UsageCount Value="7"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\libs\HashList.pas"/>
+        <UnitName Value="HashList"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="8"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\shell_project\ori.dpr"/>
+        <UnitName Value="ori"/>
+        <TopLine Value="1"/>
+        <CursorPos X="12" Y="8"/>
+        <UsageCount Value="8"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="C:\lazarus\fpc\2.4.0\source\rtl\objpas\strutils.pp"/>
+        <UnitName Value="strutils"/>
+        <TopLine Value="745"/>
+        <CursorPos X="44" Y="755"/>
+        <UsageCount Value="8"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="C:\lazarus\lcl\lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="7"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\lazarus\fpc\2.4.2\source\rtl\objpas\classes\classesh.inc"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="7"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="uMain.lfm"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="ScaleMM.pas"/>
+        <UnitName Value="ScaleMM"/>
+        <TopLine Value="447"/>
+        <CursorPos X="19" Y="462"/>
+        <UsageCount Value="7"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="..\libs\uMath.pas"/>
+        <UnitName Value="uMath"/>
+        <TopLine Value="66"/>
+        <CursorPos X="1" Y="86"/>
+        <UsageCount Value="13"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="..\VM\vmCrossValues.pas"/>
+        <UnitName Value="vmCrossValues"/>
+        <TopLine Value="127"/>
+        <CursorPos X="66" Y="150"/>
+        <UsageCount Value="13"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="C:\lazarus\fpc\2.4.3\source\rtl\inc\objpash.inc"/>
+        <TopLine Value="348"/>
+        <CursorPos X="7" Y="363"/>
+        <UsageCount Value="7"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="..\..\experements\TopMM\TopLib_CopyMemory.pas"/>
+        <UnitName Value="TopLib_CopyMemory"/>
+        <TopLine Value="8"/>
+        <CursorPos X="108" Y="22"/>
+        <UsageCount Value="15"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="..\..\experements\TopMM\TopLib_SSE2.pas"/>
+        <UnitName Value="TOPLib_SSE2"/>
+        <TopLine Value="20"/>
+        <CursorPos X="11" Y="67"/>
+        <UsageCount Value="8"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="..\shell_project\options.inc"/>
+        <TopLine Value="1"/>
+        <CursorPos X="16" Y="2"/>
+        <UsageCount Value="15"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="..\VM\vmClasses.pas"/>
+        <UnitName Value="vmClasses"/>
+        <TopLine Value="425"/>
+        <CursorPos X="9" Y="239"/>
+        <UsageCount Value="10"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\VM\ori_vmEval.pas"/>
+        <UnitName Value="ori_vmEval"/>
+        <TopLine Value="278"/>
+        <CursorPos X="48" Y="296"/>
+        <UsageCount Value="16"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="uMain.lrs"/>
+        <TopLine Value="1"/>
+        <CursorPos X="17" Y="1"/>
+        <UsageCount Value="8"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <TopLine Value="3175"/>
+        <CursorPos X="1" Y="3189"/>
+        <UsageCount Value="31"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="..\ori_Stack.pas"/>
+        <UnitName Value="ori_Stack"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="13" Y="8"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="..\VM\ori_vmCompiler.pas"/>
+        <UnitName Value="ori_vmCompiler"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="37" Y="4"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="C:\lazarus\components\synedit\synmemo.pas"/>
+        <UnitName Value="SynMemo"/>
+        <TopLine Value="56"/>
+        <CursorPos X="34" Y="68"/>
+        <UsageCount Value="15"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="C:\lazarus\lcl\lmessages.pp"/>
+        <UnitName Value="LMessages"/>
+        <TopLine Value="160"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="8"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="..\ori_ManRes.pas"/>
+        <UnitName Value="ori_ManRes"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="11" Y="7"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="..\VM\ori_vmVariables.pas"/>
+        <UnitName Value="ori_vmVariables"/>
+        <TopLine Value="103"/>
+        <CursorPos X="26" Y="117"/>
+        <UsageCount Value="19"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="..\VM\ori_vmUserFunc.pas"/>
+        <UnitName Value="ori_vmUserFunc"/>
+        <TopLine Value="300"/>
+        <CursorPos X="29" Y="314"/>
+        <UsageCount Value="19"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="..\VM\ori_vmTables.pas"/>
+        <UnitName Value="ori_vmTables"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="5"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="..\libs\ori_HashList.pas"/>
+        <UnitName Value="ori_HashList"/>
+        <TopLine Value="2"/>
+        <CursorPos X="25" Y="12"/>
+        <UsageCount Value="18"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="..\libs\ori_Hash32.pas"/>
+        <UnitName Value="ori_Hash32"/>
+        <TopLine Value="98"/>
+        <CursorPos X="27" Y="115"/>
+        <UsageCount Value="18"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="..\VM\ori_vmValues.pas"/>
+        <UnitName Value="ori_vmValues"/>
+        <TopLine Value="447"/>
+        <CursorPos X="23" Y="34"/>
+        <UsageCount Value="12"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="..\VM\ori_vmTypes.pas"/>
+        <UnitName Value="ori_vmTypes"/>
+        <TopLine Value="469"/>
+        <CursorPos X="25" Y="489"/>
+        <UsageCount Value="18"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <UnitName Value="ori_vmLoader"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="195"/>
+        <CursorPos X="5" Y="204"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="..\libs\ori_FastArrays.pas"/>
+        <UnitName Value="ori_FastArrays"/>
+        <TopLine Value="11"/>
+        <CursorPos X="3" Y="19"/>
+        <UsageCount Value="8"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="..\ori_OpGen.pas"/>
+        <UnitName Value="ori_OpGen"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="39" Y="19"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="..\VM\ori_Options.inc"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="21"/>
+        <CursorPos X="18" Y="31"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit66>
+    </Units>
+    <JumpHistory Count="28" HistoryIndex="27">
+      <Position1>
+        <Filename Value="..\VM\ori_vmCompiler.pas"/>
+        <Caret Line="1226" Column="8" TopLine="1226"/>
+      </Position1>
+      <Position2>
+        <Filename Value="..\ori_OpGen.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="261" Column="55" TopLine="245"/>
+      </Position3>
+      <Position4>
+        <Filename Value="..\ori_ManRes.pas"/>
+        <Caret Line="673" Column="67" TopLine="654"/>
+      </Position4>
+      <Position5>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="260" Column="11" TopLine="246"/>
+      </Position5>
+      <Position6>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="198" Column="25" TopLine="189"/>
+      </Position6>
+      <Position7>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="204" Column="16" TopLine="190"/>
+      </Position7>
+      <Position8>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="205" Column="8" TopLine="190"/>
+      </Position8>
+      <Position9>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="240" Column="37" TopLine="226"/>
+      </Position9>
+      <Position10>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="241" Column="44" TopLine="226"/>
+      </Position10>
+      <Position11>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="299" Column="15" TopLine="285"/>
+      </Position11>
+      <Position12>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="306" Column="18" TopLine="285"/>
+      </Position12>
+      <Position13>
+        <Filename Value="..\VM\ori_vmLoader.pas"/>
+        <Caret Line="321" Column="14" TopLine="307"/>
+      </Position13>
+      <Position14>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="245" Column="11" TopLine="241"/>
+      </Position14>
+      <Position15>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="66" Column="13" TopLine="56"/>
+      </Position15>
+      <Position16>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="254" Column="44" TopLine="241"/>
+      </Position16>
+      <Position17>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="3" Column="22" TopLine="1"/>
+      </Position17>
+      <Position18>
+        <Filename Value="..\Orion.pas"/>
+        <Caret Line="16" Column="48" TopLine="1"/>
+      </Position18>
+      <Position19>
+        <Filename Value="..\ori_OpGen.pas"/>
+        <Caret Line="18" Column="29" TopLine="1"/>
+      </Position19>
+      <Position20>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="3" Column="22" TopLine="1"/>
+      </Position20>
+      <Position21>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="254" Column="51" TopLine="236"/>
+      </Position21>
+      <Position22>
+        <Filename Value="OrionTest.lpr"/>
+        <Caret Line="5" Column="16" TopLine="1"/>
+      </Position22>
+      <Position23>
+        <Filename Value="OrionTest.lpr"/>
+        <Caret Line="11" Column="5" TopLine="1"/>
+      </Position23>
+      <Position24>
+        <Filename Value="..\VM\ori_vmTables.pas"/>
+        <Caret Line="299" Column="30" TopLine="270"/>
+      </Position24>
+      <Position25>
+        <Filename Value="..\VM\ori_vmTables.pas"/>
+        <Caret Line="22" Column="61" TopLine="7"/>
+      </Position25>
+      <Position26>
+        <Filename Value="..\VM\ori_vmTables.pas"/>
+        <Caret Line="60" Column="1" TopLine="45"/>
+      </Position26>
+      <Position27>
+        <Filename Value="..\VM\ori_vmTables.pas"/>
+        <Caret Line="2" Column="4" TopLine="1"/>
+      </Position27>
+      <Position28>
+        <Filename Value="..\ori_Stack.pas"/>
+        <Caret Line="75" Column="17" TopLine="60"/>
+      </Position28>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..;..\libs;..\VM;..\VM\funcs;$(LazarusDir)\lcl\units\$(TargetCPU)-$(TargetOS);$(LazarusDir)\lcl\units\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType);$(LazarusDir)\components\codetools\units\$(TargetCPU)-$(TargetOS);$(LazarusDir)\components\custom;$(LazarusDir)\packager\units\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <CStyleOperator Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <Optimizations>
+        <VariablesInRegisters Value="True"/>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <IgnoredMessages idx3126="True" idx3187="True" idx3189="True" idx4015="True" idx4047="True" idx4049="True" idx4055="True" idx4079="True" idx4080="True" idx4081="True" idx5003="True" idx5023="True" idx5024="True" idx5026="True" idx5028="True" idx5039="True" idx5057="True" idx5058="True" idx5060="True" idx5062="True" idx6048="True" idx7039="True"/>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsGlobal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\VM\vmEval.pas"/>
+        <Line Value="1414"/>
+      </Item1>
+    </BreakPoints>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\2.6.2\bin\x86_64-win64\fpc.exe" Date="1125672322"/>
+  <Params Value=" -MObjFPC -Sghi -CX -O3 -OoREGVAR -g -gl -Xg -XX -WG -vewnhi -FuE:\apps\orionphp -FuE:\apps\orionphp\libs -FuE:\apps\orionphp\VM -FuE:\apps\orionphp\VM\funcs -FuC:\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\components\codetools\units\x86_64-win64 -FuC:\lazarus\components\custom -FuC:\lazarus\packager\units\x86_64-win64 -FuC:\lazarus\components\synedit\units\x86_64-win64\win32 -FuC:\lazarus\ideintf\units\x86_64-win64\win32 -FuC:\lazarus\components\lazutils\lib\x86_64-win64 -FuE:\apps\orionphp\project_lazarus\ -l -vm3126,3187,3189,4015,4047,4049,4055,4079,4080,4081,5003,5023,5024,5026,5028,5039,5057,5058,5060,5062,6048,7039 -dLCL -dLCLwin32 OrionTest.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>

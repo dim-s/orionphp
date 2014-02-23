@@ -1,0 +1,8 @@
+# PHP 5.2: 1300 mlsec
+# Orion: 500-550 mlsec =)
+$d = function(){
+  return 20;
+}
+
+$d = $d( $d( $d() ) );
+echo $d;

@@ -1,0 +1,1 @@
++ √енератор модул€ OriWrap исход€ из исходников vmShortApi и шаблона template.txt

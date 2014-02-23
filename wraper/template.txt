@@ -1,0 +1,90 @@
+unit OriWrap;
+
+// IN PROGRESS !!!!
+
+{$IFDEF FPC}
+  {$MODE DELPHI}
+  {$MACRO ON}
+  {$PACKRECORDS C}
+  {$IFDEF LINUX}
+    {$DEFINE LINUX_OR_DARWIN}
+  {$ENDIF}
+  {$IFDEF DARWIN}
+    {$DEFINE LINUX_OR_DARWIN}
+  {$ENDIF}
+{$ENDIF}
+
+{$IFDEF MSWINDOWS}
+  {$DEFINE WINDOWS}
+{$ENDIF}
+
+interface
+
+  uses SysUtils, vmCrossValues
+  {$IFDEF DARWIN}
+  ,MacOSAll;
+  {$ENDIF}
+  ;
+  
+  function ORION_LOAD(LibName: AnsiString): Boolean;
+  procedure ORION_UNLOAD();
+  
+  {$IFDEF LINUX_OR_DARWIN}
+  function dlopen ( Name : PChar; Flags : longint) : Pointer; cdecl; external 'dl';
+  function dlclose( Lib : Pointer) : Longint; cdecl; external 'dl';
+  function dlsym  ( Lib : Pointer; Name : Pchar) : Pointer; cdecl; external 'dl';
+  {$ENDIF}
+  
+  {$IFDEF WINDOWS}
+  function dlopen ( lpLibFileName : PAnsiChar) : HMODULE; stdcall; external 'kernel32.dll' name 'LoadLibraryA';
+  function dlclose( hLibModule : HMODULE ) : Boolean; stdcall; external 'kernel32.dll' name 'FreeLibrary';
+  function dlsym  ( hModule : HMODULE; lpProcName : PAnsiChar) : Pointer; stdcall; external 'kernel32.dll' name 'GetProcAddress';
+  {$ENDIF}
+
+      
+  var
+    LIB_HANDLE: {$IFDEF LINUX_OR_DARWIN} Pointer {$ENDIF} {$IFDEF WINDOWS} Cardinal {$ENDIF};
+    {$IFDEF DARWIN}
+    mainBundle   : CFBundleRef;
+    tmpCFURLRef  : CFURLRef;
+    tmpCFString  : CFStringRef;
+    tmpPath      : array[ 0..8191 ] of Char;
+    outItemHit   : SInt16;
+    {$ENDIF}
+
+
+  var
+%define_funcs%
+
+
+implementation
+
+
+function ORION_LOAD(LibName: AnsiString): Boolean;
+begin
+  {$IFDEF DARWIN}
+  mainBundle  := CFBundleGetMainBundle;
+  tmpCFURLRef := CFBundleCopyBundleURL( mainBundle );
+  tmpCFString := CFURLCopyFileSystemPath( tmpCFURLRef, kCFURLPOSIXPathStyle );
+  CFStringGetFileSystemRepresentation( tmpCFString, @tmpPath[ 0 ], 8192 );
+  mainPath    := tmpPath + '/Contents/';
+  LibName     := mainPath + 'Frameworks/' + LibName;
+  {$ENDIF}
+  LIB_HANDLE := dlopen( PAnsiChar( LibName ) {$IFDEF LINUX_OR_DARWIN}, $001 {$ENDIF} );
+  {$IFDEF LINUX_OR_DARWIN} 
+  Result := LIB_HANDLE <> nil;
+  {$ELSE}
+  Result := LIB_HANDLE <> 0;
+  {$ENDIF}
+  if Result then
+  begin
+%init_funcs%
+  end;
+end;
+
+procedure ORION_UNLOAD();
+begin
+  dlclose( LIB_HANDLE );
+end;
+
+end.

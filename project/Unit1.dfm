@@ -1,0 +1,533 @@
+object fmMain: TfmMain
+  Left = 0
+  Top = 0
+  Caption = 'Orion PHP:  Test Project'
+  ClientHeight = 676
+  ClientWidth = 728
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClick = FormClick
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignSize = (
+    728
+    676)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl: TPageControl
+    Left = 8
+    Top = 8
+    Width = 713
+    Height = 660
+    ActivePage = TabSheet1
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Script eval'
+      object Label2: TLabel
+        Left = 0
+        Top = 565
+        Width = 705
+        Height = 13
+        Align = alBottom
+        Caption = 'Errors:'
+        ExplicitWidth = 33
+      end
+      object Splitter1: TSplitter
+        Left = 0
+        Top = 358
+        Width = 705
+        Height = 4
+        Cursor = crVSplit
+        Align = alBottom
+        ExplicitLeft = -12
+        ExplicitTop = 230
+      end
+      object memo2: TSynEdit
+        Left = 0
+        Top = 362
+        Width = 705
+        Height = 203
+        Align = alBottom
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = []
+        TabOrder = 0
+        BorderStyle = bsNone
+        Gutter.DigitCount = 2
+        Gutter.Font.Charset = DEFAULT_CHARSET
+        Gutter.Font.Color = clWindowText
+        Gutter.Font.Height = -11
+        Gutter.Font.Name = 'Courier New'
+        Gutter.Font.Style = []
+        Gutter.ShowLineNumbers = True
+        Gutter.Width = 10
+        Gutter.ZeroStart = True
+        Gutter.LineNumberStart = 0
+        Highlighter = SynGeneralSyn
+        Options = [eoAutoIndent, eoDragDropEditing, eoEnhanceEndKey, eoGroupUndo, eoHideShowScrollbars, eoScrollPastEol, eoShowScrollHint, eoSmartTabDelete, eoSmartTabs, eoTabsToSpaces]
+      end
+      object memo1: TSynEdit
+        Left = 0
+        Top = 41
+        Width = 705
+        Height = 317
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = []
+        TabOrder = 1
+        BorderStyle = bsNone
+        Gutter.DigitCount = 2
+        Gutter.Font.Charset = DEFAULT_CHARSET
+        Gutter.Font.Color = clWindowText
+        Gutter.Font.Height = -11
+        Gutter.Font.Name = 'Courier New'
+        Gutter.Font.Style = []
+        Gutter.ShowLineNumbers = True
+        Gutter.Width = 10
+        Highlighter = SynPHPSyn
+        Lines.Strings = (
+          'for ($i=0;$i<1000000;$i++){'
+          ''
+          '}')
+        Options = [eoAutoIndent, eoDragDropEditing, eoEnhanceEndKey, eoGroupUndo, eoHideShowScrollbars, eoShowScrollHint, eoTabIndent, eoTabsToSpaces]
+        WantTabs = True
+      end
+      object err_list: TListBox
+        Left = 0
+        Top = 578
+        Width = 705
+        Height = 54
+        Align = alBottom
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ItemHeight = 16
+        ParentFont = False
+        TabOrder = 2
+      end
+      object Panel1: TPanel
+        Left = 0
+        Top = 0
+        Width = 705
+        Height = 41
+        Align = alTop
+        TabOrder = 3
+        object ms_count: TLabel
+          Left = 232
+          Top = 3
+          Width = 12
+          Height = 13
+          Caption = '...'
+        end
+        object b_start: TBitBtn
+          Left = 3
+          Top = 3
+          Width = 94
+          Height = 30
+          Caption = 'Run (F9)'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          OnClick = b_startClick
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000000000000000000000000000000000000000000000000
+            000004733AFF21824FFF638272FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+            A3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+            47FF889C92FF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+            9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+            77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+            78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+            000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+            9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+            49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+            C3FF000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000}
+        end
+        object b_stop: TBitBtn
+          Left = 103
+          Top = 3
+          Width = 110
+          Height = 30
+          Caption = 'Stop (Ctrl+F2)'
+          Enabled = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 1
+          OnClick = b_stopClick
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000000000000000000000000000000000000000000000DFC0
+            A700DFC0A7FFDFC0A7FFDFC0A7FFDFC0A7FFDFC0A7FFDFC0A7FFDFC0A7FFDFC0
+            A7FFDFC0A7FFDFC0A7FFDFC0A7FFDFC0A7FFDFC0A7000000000000000000DFC0
+            A7FFDCBA9FFFA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+            34FFA46534FFA46534FFA46534FFDCBA9FFFDFC0A7FF0000000000000000DFC0
+            A7FFA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+            34FFA46534FFA46534FFA46534FFA46534FFDFC0A7FF0000000000000000DEBF
+            A5FFA46534FFA46534FFFCF9F7FFFCF9F7FFFCF9F7FFFCF9F7FFFCF9F7FFFCF9
+            F7FFFCF9F7FFFCF9F7FFA46534FFA46534FFDEBFA5FF0000000000000000DEBE
+            A4FFA46534FFA46534FFFCF9F7FFF0C29CFFF0C29CFFF2C29CFFF2C29CFFF0BF
+            98FFF0BB94FFFCF9F7FFA46534FFA46534FFDEBEA4FF0000000000000000DDBD
+            A3FFA46534FFA46534FFFCF9F7FFF3C6A1FFF2C7A4FFF2C8A6FFF2C8A6FFF2C7
+            A4FFF2C5A0FFFCF9F7FFA46534FFA46534FFDDBDA3FF0000000000000000DDBC
+            A2FFA46534FFA46534FFFCF9F7FFF2C7A8FFF3CCADFFF5D0B5FFF5D0B5FFF5D0
+            B5FFF4CEB0FFFCF9F7FFA46534FFA46534FFDDBCA2FF0000000000000000DDBC
+            A2FFA46534FFA46534FFFCF9F7FFF4CBAAFFF4D1B4FFF6D6BCFFF7D9C3FFF7D9
+            C3FFF6D7C0FFFCF9F7FFA46534FFA46534FFDDBCA2FF0000000000000000DDBC
+            A2FFA46534FFA46534FFFCF9F7FFF2CAACFFF6D2B4FFF7D8BFFFF7DBC5FFF9E1
+            CDFFF8E0D0FFFCF9F7FFA46534FFA46534FFDDBCA2FF0000000000000000DDBC
+            A2FFA46534FFA46534FFFCF9F7FFF3C8A5FFF3CEB1FFF6D6BCFFF7DAC5FFF9E1
+            D3FFF8E5D8FFFBF7F5FFA46534FFA46534FFDDBCA2FF0000000000000000DCBB
+            A0FFA46534FFA46534FFFCF9F7FFFCF9F7FFFCF9F7FFFCF9F7FFFCF9F7FFFCF9
+            F7FFFCF9F7FFFCF9F7FFA46534FFA46534FFDCBBA0FF0000000000000000DCBA
+            9FFFA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+            34FFA46534FFA46534FFA46534FFA46534FFDCBA9FFF0000000000000000DCBA
+            9FFFDCBA9FFFA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+            34FFA46534FFA46534FFA46534FFDCBA9FFFDCBA9FFF0000000000000000DCBA
+            9F00DCBA9FFFDCBA9FFFDCBA9FFFDCBA9FFFDCBA9FFFDCBA9FFFDCBA9FFFDCBA
+            9FFFDCBA9FFFDCBA9FFFDCBA9FFFDCBA9FFFDCBA9F0000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000}
+        end
+        object show_console: TCheckBox
+          Left = 329
+          Top = 16
+          Width = 97
+          Height = 17
+          Caption = 'Show Console'
+          Checked = True
+          State = cbChecked
+          TabOrder = 2
+        end
+        object use_thread: TCheckBox
+          Left = 232
+          Top = 16
+          Width = 97
+          Height = 17
+          Caption = 'Use Thread'
+          TabOrder = 3
+        end
+        object BitBtn3: TBitBtn
+          Left = 624
+          Top = 4
+          Width = 73
+          Height = 30
+          Caption = 'Restart'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 4
+          OnClick = BitBtn3Click
+        end
+        object BitBtn4: TBitBtn
+          Left = 545
+          Top = 4
+          Width = 73
+          Height = 30
+          Caption = 'Demos'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 5
+          OnClick = BitBtn4Click
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Demos'
+      ImageIndex = 1
+      TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+      object Label1: TLabel
+        Left = 16
+        Top = 16
+        Width = 49
+        Height = 13
+        Caption = 'Examples:'
+      end
+      object l_info: TLabel
+        Left = 16
+        Top = 328
+        Width = 42
+        Height = 13
+        Caption = 'Console:'
+      end
+      object BitBtn1: TBitBtn
+        Left = 575
+        Top = 35
+        Width = 114
+        Height = 30
+        Caption = 'Run Script'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+        OnClick = b_startClick
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          000004733AFF21824FFF638272FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+          A3FF000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+          47FF889C92FF0000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+          9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+          77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+          000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+          78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+          000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+          9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+          49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+          C3FF000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end
+      object BitBtn2: TBitBtn
+        Left = 575
+        Top = 71
+        Width = 114
+        Height = 30
+        Caption = 'Run checked'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+        OnClick = b_startClick
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          000004733AFF21824FFF638272FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF7ACFA4FF2C8C5AFF3D7659FFAEAEAEFF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF82D8ACFF76D6A6FF3C9D6AFF27744CFFACAEADFF000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000009773FFF83DBAEFF1FC671FF72DEA7FF4BB27FFF177445FFA8ADAAFF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF83DCAFFF11C369FF1ACC73FF69DFA3FF5AC28DFF137643FF9EA7
+          A3FF000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF10BD65FF11C167FF13C269FF59D395FF67C998FF167C
+          47FF889C92FF0000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF0DB35EFF0EB660FF0EB660FF0DB45FFF47C484FF70CA
+          9CFF1D824DFF678C79FF00000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF0CAA58FF12AE5EFF15AF60FF16AD61FF13AA5DFF3AB6
+          77FF75C79DFF288957FF4E8367FF000000000000000000000000000000000000
+          000004733AFFA9DCC1FF2EAD6BFF2BAD6AFF27AB68FF22A964FF1CA55FFF41B2
+          78FF78C69FFF298858FF678C79FF000000000000000000000000000000000000
+          000004733AFFA9DCC1FF36AD70FF32AC6DFF2DAA6AFF28A866FF58BC89FF78C5
+          9DFF1F804EFF839A8EFF00000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF3EB176FF3AAF73FF36AE70FF6FC598FF71BF97FF187B
+          49FFA6B0ABFF0000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF45B47BFF47B47CFF82CCA6FF67B68CFF177745FFC1C5
+          C3FF000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA5DABFFF57BB87FF90D2B0FF5BAB82FF23774CFFD4D5D4FF0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA9DCC1FF9BD5B7FF4C9F73FF3D7D5CFF00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFFA4D9BEFF3D9366FF5F8873FF0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000004733AFF2D8859FF859C90FF000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end
+      object l_demos: TCheckListBox
+        Left = 16
+        Top = 35
+        Width = 553
+        Height = 278
+        ItemHeight = 13
+        TabOrder = 2
+      end
+      object console: TMemo
+        Left = 16
+        Top = 347
+        Width = 673
+        Height = 246
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+      end
+    end
+  end
+  object SynGeneralSyn: TSynGeneralSyn
+    Comments = []
+    DetectPreprocessor = False
+    IdentifierAttri.Foreground = clGray
+    IdentifierChars = 
+      '!"#$%&'#39'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`' +
+      'abcdefghijklmnopqrstuvwxyz{|}~'#1026#1027#8218#1107#8222#8230#8224#8225#8364#8240#1033#8249#1034#1036#1035#1039#1106#8216#8217#8220#8221#8226#8211#8212#152#8482#1113#8250#1114#1116#1115#1119#160 +
+      #1038#1118#1032#164#1168#166#167#1025#169#1028#171#172#173#174#1031#176#177#1030#1110#1169#181#182#183#1105#8470#1108#187#1112#1029#1109#1111#1040#1041#1042#1043#1044#1045#1046#1047#1048#1049#1050#1051#1052#1053#1054#1055#1056#1057#1058#1059#1060#1061#1062#1063#1064#1065#1066#1067#1068#1069#1070#1071#1072 +
+      #1073#1074#1075#1076#1077#1078#1079#1080#1081#1082#1083#1084#1085#1086#1087#1088#1089#1090#1091#1092#1093#1094#1095#1096#1097#1098#1099#1100#1101#1102#1103
+    KeyWords.Strings = (
+      'ASSIGN'
+      'CALL'
+      'DEC'
+      'DEF'
+      'INC'
+      'JMP'
+      'JMPZ'
+      'PUSH'
+      'PUSH_B'
+      'PUSH_D'
+      'PUSH_GV'
+      'PUSH_L'
+      'PUSH_S'
+      'PUSH_VAR'
+      'UNDEF')
+    NumberAttri.Foreground = clRed
+    Left = 232
+    Top = 384
+  end
+  object SynPHPSyn: TSynPHPSyn
+    CommentAttri.Foreground = clGray
+    StringAttri.Foreground = 16512
+    VariableAttri.Foreground = clGreen
+    VariableAttri.Style = [fsBold]
+    Left = 264
+    Top = 384
+  end
+  object MainMenu1: TMainMenu
+    Left = 304
+    Top = 384
+    object Orion1: TMenuItem
+      Caption = 'Orion'
+      object itOpen: TMenuItem
+        Caption = 'Open'
+        OnClick = itOpenClick
+      end
+      object itRun: TMenuItem
+        Caption = 'Run'
+        ShortCut = 120
+        OnClick = itRunClick
+      end
+      object itStop: TMenuItem
+        Caption = 'Stop'
+        ShortCut = 16497
+        OnClick = itStopClick
+      end
+    end
+    object File1: TMenuItem
+      Caption = 'File'
+      Visible = False
+      object SaveBytecode1: TMenuItem
+        Caption = 'Save Byte-code'
+        OnClick = SaveBytecode1Click
+      end
+    end
+    object Reset1: TMenuItem
+      Caption = 'Reset'
+      object Engine1: TMenuItem
+        Caption = 'Engine'
+        OnClick = Engine1Click
+      end
+      object Constants1: TMenuItem
+        Caption = 'Constants'
+        OnClick = Constants1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object All1: TMenuItem
+        Caption = 'All'
+        ShortCut = 16500
+        OnClick = All1Click
+      end
+    end
+    object N1: TMenuItem
+      Caption = '?'
+      object itAbout: TMenuItem
+        Caption = 'About'
+        OnClick = itAboutClick
+      end
+    end
+  end
+  object OD: TOpenDialog
+    Filter = 
+      'PHP Script (*.php)|*.php|Orion Script (*.ori)|*.ori|Text (*.txt)' +
+      '|*.txt|All files (*.*)|*.*'
+    Left = 200
+    Top = 384
+  end
+end
